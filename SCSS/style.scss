@@ -1,0 +1,32 @@
+@import "variables";
+
+@mixin flex ($direction, $justify, $align){
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+.menu{
+    background-color: $base-color;
+    padding: 10px 20px;
+
+    ul {
+        @include flex(row, center, center,);
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            margin: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 24px;
+            &:hover{
+                text-decoration: underline;
+                color: $text;
+            }
+        }
+    }
+}

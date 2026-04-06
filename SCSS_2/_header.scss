@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap:0){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+
+header{
+    background-color: $black-blue;
+}
+
+.header {
+    &__wrapper{
+        background-color: $black-blue;
+        @include flex(row, space-between, center);
+    }
+
+    &__nav{
+        @include flex(row, space-between, center, 48px);
+        &-menu{
+            ul{
+                @include flex(row, center, center, 24px)
+            }
+            a{
+                color: white;
+            }
+        }
+    }
+    &__lang{
+        a{
+            @include flex(row, center, center, 4px);
+            color: #fff;
+        }
+    }
+
+}

@@ -1,0 +1,13 @@
+# Compiled CSS (generated from SCSS)
+css/
+
+# Source maps
+*.css.map
+
+# Editor & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
